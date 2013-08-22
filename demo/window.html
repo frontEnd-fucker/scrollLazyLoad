@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window</title>
+    <style>
+        .holder {
+            height: 200px;
+            background-color: silver;
+            border: 1px solid green;
+        }
+        .main {
+            height: 400px;
+            overflow-y: scroll;
+        }
+        img {
+            display: block;
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="holder">1</div>
+    <div class="holder">2</div>
+    <div class="holder">3</div>
+    <div class="holder">4</div>
+    <div class="container">
+        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=500x300" alt="" />
+        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=200x300" alt="" />
+        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=300x300" alt="" />
+        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=400x300" alt="" />
+        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=100x300" alt="" />
+        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=700x300" alt="" />
+        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=800x300" alt="" />
+        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=100x300" alt="" />
+        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=900x300" alt="" />
+        <div class="lazy" data-src="temp.html"></div>   
+    </div>
+    
+    <script src="jquery-1.10.2.js"></script>    
+    <script src="jquery.lazyscroll.js"></script> 
+    <script>
+        $('.container').scrollLazyLoad({
+            attr: 'data-src',
+            fn: function(){
+                console.log('DONE!!!');
+            }
+        });
+    </script>
+</body>
+</html>

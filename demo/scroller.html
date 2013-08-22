@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scroller</title>
+    <style>
+        .header {
+            height:100px;
+            border: 1px solid pink;
+        }
+        .holder {
+            height: 199px;
+            background-color: silver;
+            border-bottom: 1px solid #312;
+            font-size: 50px;
+            color: #fff;
+        }
+        .main {
+            height: 400px;
+            overflow-y: scroll;
+        }
+        img {
+            display: block;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">````````````</div>
+    <div class="main">
+        <div class="holder">200</div>
+        <div class="holder">200</div>
+        <div class="holder">200</div>
+        <div class="holder">200</div>
+        <div class="container">
+            <img src="" data-src="http://img.f2e.taobao.net/img.png?x=100x300" alt="" />
+            <img src="" data-src="http://img.f2e.taobao.net/img.png?x=300x300" alt="" />
+            <img src="" data-src="http://img.f2e.taobao.net/img.png?x=200x300" alt="" />
+            <img src="" data-src="http://img.f2e.taobao.net/img.png?x=500x300" alt="" />
+            <img src="" data-src="http://img.f2e.taobao.net/img.png?x=700x300" alt="" />
+            <img src="" data-src="http://img.f2e.taobao.net/img.png?x=200x300" alt="" />
+            <div class="lazy" data-src="temp.html"></div>   
+        </div>
+    </div>
+    
+    <script src="jquery-1.10.2.js"></script>    
+    <script src="jquery.scrollLazyLoad.js"></script> 
+    <script>
+        $('.container').scrollLazyLoad({
+            scroller: $('.main'),
+            attr: 'data-src',
+            fn: function(){
+                console.log('DONE!!!');
+            }
+        });
+    </script>
+</body>
+</html>
