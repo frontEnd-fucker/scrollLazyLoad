@@ -20,7 +20,7 @@
             elemList.push($(v));
         });
 
-        // 判断滚动的最外层是window/others
+        // 判断滚动的最外层是window/others，只判断一次
         var isWinScroller = function () {
             if (scroller[0] === window) {
                 return function (elem) {
@@ -45,6 +45,7 @@
                 if (isInView($this) && url) {
                     if (tagName === 'img') {
                         $this.attr('src', url);
+                        // callback
                         settings.fn.call($this[0]);
                     } else {
                         $this.load(url, function () {
@@ -53,6 +54,7 @@
                              function (i, v) {
                                 elemList.push($(v));
                             });
+                            // callback
                             settings.fn.call($this[0]);
                         });
                     }
@@ -70,6 +72,7 @@
             }, time);
         };
 
+        // 初始加载一次
         loading();
 
         scroller.scroll(function () {
