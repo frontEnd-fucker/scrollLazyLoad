@@ -37,5 +37,3 @@
         }
     });
 ```
-
-可下载demo，在服务器上运行window.html/scroller.html

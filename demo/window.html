@@ -20,30 +20,27 @@
     </style>
 </head>
 <body>
-    <div class="holder">1</div>
-    <div class="holder">2</div>
-    <div class="holder">3</div>
-    <div class="holder">4</div>
     <div class="container">
-        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=500x300" alt="" />
-        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=200x300" alt="" />
-        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=300x300" alt="" />
-        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=400x300" alt="" />
-        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=100x300" alt="" />
-        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=700x300" alt="" />
-        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=800x300" alt="" />
-        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=100x300" alt="" />
-        <img src="" data-src="http://img.f2e.taobao.net/img.png?x=900x300" alt="" />
+        <img src="" data-src="http://a.hiphotos.baidu.com/baike/c%3DbaikeA1%2C10%2C95/sign=f01cb98a94cad1c8c4bbab7616550248/342ac65c103853433ba02e849213b07ecb8065380cd79014.jpg" alt="" />
+        <div class="holder">1</div>
+        <div class="holder">2</div>
+        <div class="holder">3</div>
+        <div class="holder">4</div>
+        <img src="" data-src="http://e.hiphotos.baidu.com/album/w%3D2048/sign=76181538eac4b7453494b016fbc41f17/1c950a7b02087bf4769cc4f8f3d3572c11dfcfab.jpg" alt="" />
+        <img src="" data-src="http://a.hiphotos.baidu.com/album/w%3D2048/sign=bf70380e06082838680ddb148ca1a901/08f790529822720e94fc71eb7acb0a46f21fabf5.jpg" alt="" />
+        <img src="" data-src="http://e.hiphotos.baidu.com/album/w%3D2048/sign=bce37721bba1cd1105b675208d2ac9fc/43a7d933c895d143e974773272f082025aaf07a4.jpg" alt="" />
+        <img src="" data-src="http://e.hiphotos.baidu.com/album/w%3D2048/sign=76181538eac4b7453494b016fbc41f17/1c950a7b02087bf4769cc4f8f3d3572c11dfcfab.jpg" alt="" />
+        <img src="" data-src="http://a.hiphotos.baidu.com/album/w%3D2048/sign=bf70380e06082838680ddb148ca1a901/08f790529822720e94fc71eb7acb0a46f21fabf5.jpg" alt="" />
         <div class="lazy" data-src="temp.html"></div>   
     </div>
     
     <script src="jquery-1.10.2.js"></script>    
-    <script src="jquery.lazyscroll.js"></script> 
+    <script src="jquery.scrollLazyLoad.js"></script> 
     <script>
         $('.container').scrollLazyLoad({
             attr: 'data-src',
-            fn: function(){
-                console.log('DONE!!!');
+            fn: function () {
+                console.log(this, 'DONE!!!');
             }
         });
     </script>
