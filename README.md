@@ -1,4 +1,4 @@
-# scrollLazyLoad
+ # scrollLazyLoad
 
 懒加载jQuery组件。
 
@@ -32,7 +32,7 @@
     $('.container').scrollLazyLoad({
         scroller: $('.main'),
         attr: 'data-url',
-        fn: function(){
+        fn: function () {
             console.log('DONE!!!');
         }
     });
