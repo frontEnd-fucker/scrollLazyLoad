@@ -1,4 +1,4 @@
- # scrollLazyLoad
+# scrollLazyLoad
 
 懒加载jQuery组件。
 
