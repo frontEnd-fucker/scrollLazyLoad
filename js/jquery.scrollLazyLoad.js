@@ -55,6 +55,8 @@
                         });
                     }
                     $this.removeAttr(settings['attr']);
+                    // callback
+                    settings.fn.call($this[0]);
                 }
 
             });
@@ -67,6 +69,8 @@
                 method.call(context);
             }, time);
         };
+
+        loading();
 
         scroller.scroll(function () {
             throttle(loading, $container, 100);
