@@ -20,7 +20,7 @@
             elemList.push($(v));
         });
 
-        // 判断滚动的最外层是window/others，只判断一次
+        // 判断滚动的最外层是window/others
         var isWinScroller = function () {
             if (scroller[0] === window) {
                 return function (elem) {
@@ -72,7 +72,6 @@
             }, time);
         };
 
-        // 初始加载一次
         loading();
 
         scroller.scroll(function () {

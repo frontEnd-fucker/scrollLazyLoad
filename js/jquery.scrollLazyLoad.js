@@ -45,6 +45,8 @@
                 if (isInView($this) && url) {
                     if (tagName === 'img') {
                         $this.attr('src', url);
+                        // callback
+                        settings.fn.call($this[0]);
                     } else {
                         $this.load(url, function () {
                             // 加载子区域中的img
@@ -52,11 +54,11 @@
                              function (i, v) {
                                 elemList.push($(v));
                             });
+                            // callback
+                            settings.fn.call($this[0]);
                         });
                     }
                     $this.removeAttr(settings['attr']);
-                    // callback
-                    settings.fn.call($this[0]);
                 }
 
             });
